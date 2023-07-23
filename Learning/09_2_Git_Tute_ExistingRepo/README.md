@@ -11,3 +11,5 @@ ii) If you want to create new branch then fire the command: `git checkout -b <BR
 * Step5: Check the number of files that you have commited in Staging area using comand: `git status`
 * Step6: Commit the changes in staging area:  `git commit -m '<MESSAGE>'`
 * Step7: Push the changes to the branch that you have selected in step4: `git push origin <BRANCH_NAME>`
+
+#### NOTE: If in Case you have made any changes in the Git Directly (Using Git Interface) you may need to pull the required changes using command `git pull origin main`
