@@ -12,3 +12,8 @@
 * Step6: git branch -M main
 * step7: link remote repo: `git remote add origin https://github.com/Kashyap-08/temp.git`
 * Step8: Push changes : `git push origin main`
+
+#### Important Commands
+* If you want to full new changes form repo Hit the command: `git pull origin main`
+* Switch between the branches: `git checkout <BRANCH_NAME>`
+* Delete branch: `git branch -d <BRANCH_NAME>`
