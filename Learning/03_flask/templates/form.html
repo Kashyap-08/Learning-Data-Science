@@ -1,0 +1,26 @@
+<html>
+    <head>
+        Calculate the marks obtained.
+    </head>
+
+    <body>
+        <dev class="form">
+            <h1>Calculate Average Marks</h1>
+
+            <!-- Main input for Salary Analysis-->
+            <form action="{{url_for('form')}}" method="post">
+                <input type="text" name="maths" placeholder="math marks" required="'required"/>
+                <input type="text" name="physics" placeholder="physics marks" required="'required"/>
+                <input type="text" name="chemistry" placeholder="chemistry marks" required="'required"/>
+                <input type="text" name="English" placeholder="english marks" required="'required"/>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Calculate</button>
+            </form>
+
+            <br><br>
+
+        </dev>
+
+    </body>
+</html>
