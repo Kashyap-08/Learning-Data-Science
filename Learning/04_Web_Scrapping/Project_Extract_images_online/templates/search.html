@@ -1,0 +1,15 @@
+<html>
+    <head>
+        Search the Required Item
+    </head>
+    <body>
+        <dev class="search">
+            <h1>Search Required Image</h1>
+
+            <form action="{{url_for('search')}}" method="post">
+                <input type="text" name="search" placeholder="Search" required="required">
+                <button type="submit" class="btn btn-primary btn-block btn-large">Search</button>
+            </form> 
+        </dev>
+    </body>
+</html>

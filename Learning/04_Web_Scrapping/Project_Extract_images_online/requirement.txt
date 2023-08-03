@@ -1,0 +1,6 @@
+Flask
+pymongo
+bs4
+requests
+base64
+python-dotenv

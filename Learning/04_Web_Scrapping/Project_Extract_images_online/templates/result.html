@@ -1,0 +1,53 @@
+
+<h1>Record Saved Successfully</h1>
+
+<!-- ============================================== -->
+<!-- DISPLAY DATA IN GRID FORMAT -->
+<!-- ================================================ -->
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Grid</title>
+    <style>
+        /* Add CSS to create a grid layout */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap: 10px;
+        }
+
+        /* Style the images */
+        .image-grid img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-grid">
+        {% for image_data in data %}
+            <img src="data:image/jpeg;base64,{{ image_data['Image']|b64encode }}" alt="Image">
+            <h4>{{image_data['Img_name']}}</h4>
+        {% endfor %}
+    </div>
+</body>
+</html>
+
+<!-- ======================================================= -->
+<!-- DISPLAY THE OUTPUT IN NORMAL FORMAT -->
+<!-- ==================================================== -->
+<!-- index.html -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Image Display</title>
+</head>
+<body>
+    {% for image_data in data %}
+        <img src="data:image/jpeg;base64,{{ image_data['Image']|b64encode }}" alt="Image">
+        <h4>{{image_data['Img_name']}}</h4>
+    {% endfor %}
+</body>
+</html> -->

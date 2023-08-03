@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        input[type="text"] {
+            padding: 6px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 8px 12px;
+            font-size: 16px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        h2 {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Search Page</h1>
+
+<form action="{{ url_for('search') }}" method="post">
+    <label for="search_input">Enter the URL:</label>
+    <input type="text" name="search" placeholder="Search" required>
+    <button type="submit">Search</button>
+</form>
+
+{% if results %}
+    <h2>Search Results:</h2>
+    <table border="1">
+        <tr>
+            {% for key in results[0].keys() %}
+                <th>{{ key }}</th>
+            {% endfor %}
+        </tr>
+        {% for item in results %}
+            <tr>
+                {% for value in item.values() %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endif %}
+
+</body>
+</html>
+
+
+
+<!-- <html>
+    <head>
+        Search the Required Item
+    </head>
+    <body>
+        <dev class="search">
+            <h1>Search Required Image</h1>
+
+            <form action="{{url_for('search')}}" method="post">
+                <input type="text" name="search" placeholder="Search" required="required">
+                <button type="submit" class="btn btn-primary btn-block btn-large">Search</button>
+            </form> 
+        </dev>
+    </body>
+</html> -->
