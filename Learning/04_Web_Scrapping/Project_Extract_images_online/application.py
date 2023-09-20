@@ -5,17 +5,9 @@ import pymongo
 import os
 import base64
 
-import dotenv
-import os
-
-dotenv.load_dotenv('.env')
-
-user_id = os.environ['USERID']
-password = os.environ['PASSCODE']
-
 def connect():
     try: 
-        client = pymongo.MongoClient(f"mongodb+srv://{user_id}:{password}@cluster01.n7r3noi.mongodb.net/?retryWrites=true&w=majority")
+        client = pymongo.MongoClient("mongodb+srv://Demo:Demo@cluster01.n7r3noi.mongodb.net/?retryWrites=true&w=majority")
         db = client.test
         print(db)
         print("Connection Established Successfully")
@@ -98,8 +90,6 @@ def delete_table(db, table_name):
     try:
         coll = db[table_name]
         coll.drop
-    except:
-        print("error while deleting table")
 
 application = Flask(__name__)
 

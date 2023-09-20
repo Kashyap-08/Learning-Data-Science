@@ -15,6 +15,7 @@ def get_db_conn(db_name):
     try:
         client = pymongo.MongoClient(f"mongodb+srv://{user_id}:{password}@cluster01.n7r3noi.mongodb.net/?retryWrites=true&w=majority")
         db = client[db_name]
+        print("DB connection is successful.")
         return db
     except Exception as e:
         print("Error While connecting to MongoDB database named: ", db_name)
@@ -44,7 +45,7 @@ def get_all(db, table_name):
     '''
     try:
         coll = db[table_name]
-        records = coll.find()
+        records = coll.find({}, {"_id":0})
 
         return records
     except Exception as e:

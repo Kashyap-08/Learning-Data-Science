@@ -3,3 +3,7 @@ python-dotenv
 pymongo
 bs4
 requests
+geocoder
+pandas
+matplotlib
+seaborn
