@@ -2,7 +2,7 @@ echo [$(date)]: "START"
 
 echo [$(date)]: "CREATING VENV WITH PYTHON 3.9 VERSION"
 
-conda create -p ./venv python==3.9 -y
+conda create --prefix ./venv python==3.9 -y
 
 echo [$(date)]: "ACTIVATING THE ENVIRONMENT"
 
