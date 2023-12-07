@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Learning/INeuron/Live/13_MLFlow_dvc_demo/mlruns/0/ee578cc881f04c939947d1c3ffc297e0/artifacts
+end_time: 1700677119756
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ee578cc881f04c939947d1c3ffc297e0
+run_name: thundering-skink-706
+run_uuid: ee578cc881f04c939947d1c3ffc297e0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1700677119726
+status: 3
+tags: []
+user_id: HP

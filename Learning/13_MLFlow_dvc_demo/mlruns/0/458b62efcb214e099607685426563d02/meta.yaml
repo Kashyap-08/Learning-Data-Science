@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Learning/INeuron/Live/13_MLFlow_dvc_demo/mlruns/0/458b62efcb214e099607685426563d02/artifacts
+end_time: 1700677091532
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 458b62efcb214e099607685426563d02
+run_name: unequaled-loon-837
+run_uuid: 458b62efcb214e099607685426563d02
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1700677091473
+status: 3
+tags: []
+user_id: HP
